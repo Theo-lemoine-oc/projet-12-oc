@@ -1,10 +1,10 @@
 import './App.css';
-import { GetID } from './hooks/GetID.jsx';
+import { RoutesPage } from './router/Routes.jsx';
 
 function App() {
   return (
     <div>
-      
+      <RoutesPage />
     </div>
   );
 }
