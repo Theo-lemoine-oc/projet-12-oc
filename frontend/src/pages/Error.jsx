@@ -1,8 +1,15 @@
 import React from 'react';
+import Sidebar from "../components/sidebar/Sidebar.jsx";
+
 
 function Error() {
   return (
-      <h1>Error 404</h1>
+    <div className='container'>
+      <Sidebar />
+      <section>
+        <h1>Error 404</h1>
+      </section>
+    </div>
   );
 }
 
