@@ -1,9 +1,10 @@
 import React from 'react';
+import MainTitle from '../components/utils/MainTitle';
 
 function Home() {
   return (
     <section>
-        <h1>Homepage</h1>
+        <MainTitle />
     </section>
   );
 }
