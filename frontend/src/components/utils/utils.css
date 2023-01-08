@@ -1,0 +1,13 @@
+.main-title h1 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.main-title h1 span {
+    color: #FF0101;
+}
+
+.main-title p {
+    font-size: 18px;
+}

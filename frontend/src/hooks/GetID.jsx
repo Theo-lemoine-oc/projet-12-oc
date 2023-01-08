@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export const GetID = () => {
+const api = axios.create({
+  baseURL: `http://localhost:3000/`
+});
+
+export const GetID = (id) => {
 
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -11,8 +15,8 @@ export const GetID = () => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get('http://localhost:3000/user/:id')
-        setData(response);
+        const response = await api.get('user/:id'.replace(':id', id))
+        setData(response.data.data);
         setIsLoading(false);
       } catch (e) {
         setHasError(true);

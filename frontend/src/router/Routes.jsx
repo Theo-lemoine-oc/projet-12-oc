@@ -10,7 +10,7 @@ export const RoutesPage = () => {
         <BrowserRouter>
         <main>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/user/:id" element={<Home />} />
                 <Route path="*" element={<Error />} />
             </Routes>
         </main>
