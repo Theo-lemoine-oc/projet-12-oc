@@ -1,11 +1,16 @@
 import React from 'react';
 import MainTitle from '../components/utils/MainTitle';
+import Sidebar from "../components/sidebar/Sidebar.jsx";
+
 
 function Home() {
   return (
-    <section>
+    <div className='container'>
+      <Sidebar />
+      <section>
         <MainTitle />
-    </section>
+      </section>
+    </div>
   );
 }
 

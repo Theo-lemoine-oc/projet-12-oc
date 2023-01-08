@@ -6,3 +6,12 @@
   box-sizing: border-box;
   font-family: 'Roboto';
 }
+
+main {
+  height: calc(100vh - 91px);
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
