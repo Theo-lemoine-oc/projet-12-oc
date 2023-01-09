@@ -7,7 +7,7 @@ const api = axios.create({
 
 export const GetID = (id) => {
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false)
 
