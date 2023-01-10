@@ -6,7 +6,7 @@ function Error() {
   return (
     <div className='container'>
       <Sidebar />
-      <section className='content'>
+      <section className='dashboard'>
         <h1>Error 404</h1>
       </section>
     </div>
