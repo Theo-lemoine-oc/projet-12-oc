@@ -17,6 +17,7 @@ export const useUserInfos = (id) => {
       try {
         const response = await api.get('user/:id'.replace(':id', id))
         setData(response.data.data);
+        console.log(response.data.data);
         setIsLoading(false);
       } catch (e) {
         setHasError(true);
