@@ -1,7 +1,5 @@
 import React from "react";
 import utils from './utils.css'
-import { GetID } from "../../hooks/GetID";
-import { useParams } from 'react-router-dom';
 
 export const MainTitle = (props) => {
     const { user } = props;

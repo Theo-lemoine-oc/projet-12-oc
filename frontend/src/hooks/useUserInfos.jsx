@@ -5,7 +5,7 @@ const api = axios.create({
   baseURL: `http://localhost:3000/`
 });
 
-export const GetID = (id) => {
+export const useUserInfos = (id) => {
 
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
