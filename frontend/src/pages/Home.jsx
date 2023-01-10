@@ -16,6 +16,22 @@ function Home() {
         {(!isLoading && !hasError && data) && (
           <MainTitle user={data} />
         )}
+
+        {/* Statistiques de l'utilisateur */}
+        <div className='content'>
+          {/* Partie de gauche */}
+          <div>
+            {/* TODO : Activités */}
+            <div>
+              {/* TODO : Durée moyenne des sessions / Intensité / Score */}
+            </div>
+          </div>
+
+          {/* Partie de droite */}
+          <div>
+            {/* TODO : Calories / Proteines / Glucides / Lipides */}
+          </div>
+        </div>
       </section>
     </div>
   );
