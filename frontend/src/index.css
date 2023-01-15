@@ -20,3 +20,16 @@ main {
   width: 100%;
   padding: 5vh 5vw;
 }
+
+.dashboard .content {
+  display: flex;
+  margin-top: 4rem;
+}
+
+.dashboard .content .graphics {
+  width: 80%;
+}
+
+.dashboard .content .figures {
+  width: 20%;
+}

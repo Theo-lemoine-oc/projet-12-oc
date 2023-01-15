@@ -5,7 +5,7 @@ const api = axios.create({
   baseURL: `http://localhost:3000/`
 });
 
-export const useUserInfos = (id) => {
+export const useUserInfosActivities = (id) => {
 
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +15,7 @@ export const useUserInfos = (id) => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await api.get('user/:id'.replace(':id', id))
+        const response = await api.get('user/:id/activity'.replace(':id', id))
         setData(response.data.data);
         setIsLoading(false);
       } catch (e) {
