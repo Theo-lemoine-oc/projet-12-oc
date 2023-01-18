@@ -5,19 +5,22 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Activities from '../components/graphics/Activities';
 import { useUserInfos } from "../hooks/useUserInfos";
 import { useUserInfosActivities } from "../hooks/useUserInfosActivities";
+import { useUserInfosTime } from "../hooks/useUserInfosTime";
 import { useParams } from 'react-router-dom';
+import Time from '../components/graphics/Time';
 
 
 function Home() {
   const { id } = useParams();
   const { data: userInfos, isLoading: isLoadingUserInfos, hasError: hasErrorOnUserInfos } = useUserInfos(id);
   const { data: userInfosActivities, isLoading: isLoadingUserInfosActivities, hasError: hasErrorOnUserInfosActivities} = useUserInfosActivities(id);
+  const { data: userInfosTime, isLoading: isLoadingUserInfosTime, hasError: hasErrorOnUserInfosTime} = useUserInfosTime(id);
 
-  if (isLoadingUserInfos || isLoadingUserInfosActivities) {
+  if (isLoadingUserInfos || isLoadingUserInfosActivities || isLoadingUserInfosTime) {
     return <div>Loading in progress..</div>
   }
 
-  if (hasErrorOnUserInfos || hasErrorOnUserInfosActivities) {
+  if (hasErrorOnUserInfos || hasErrorOnUserInfosActivities || hasErrorOnUserInfosTime) {
     return <div>An error has been occured</div>
   }
 
@@ -34,10 +37,12 @@ function Home() {
           {/* Partie de gauche */}
           <section className='graphics'>
             {(!isLoadingUserInfosActivities && !hasErrorOnUserInfosActivities && userInfosActivities) && (
-              <Activities activity={userInfosActivities} />
+              <Activities activity={ userInfosActivities } />
             )}
-            <div>
-              {/* TODO : Durée moyenne des sessions / Intensité / Score */}
+            <div className='graphics-bottom'>
+              {(!isLoadingUserInfosTime && !hasErrorOnUserInfosTime && userInfosTime) && (
+                <Time time={ userInfosTime } />
+              )}
             </div>
           </section>
 
