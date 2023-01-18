@@ -1,7 +1,14 @@
+h2 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
 /*** Activity ***/
 .activity {
     background-color: #FBFBFB;
     padding: 1rem;
+    border-radius: 5px;
 }
 
 .activity .top {
@@ -11,9 +18,6 @@
 }
 
 .activity h2 {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 24px;
     color: #20253A;
 }
 
@@ -58,10 +62,36 @@
     flex-direction: column;
     color: #fff;
     border: none;
+    outline: none;
     padding: 1rem;
     background-color: #E60000;
 }
 
 .activity .custom-tooltip span:first-child {
     margin-bottom: 1rem;
+}
+
+
+/*** Average session time ***/
+.time {
+    background-color: #E60000;
+    width: 32%;
+    height: 40%;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.time .top {
+    margin-bottom: 2rem;
+}
+
+.time h2 {
+    color: #fff;
+}
+
+.time .custom-tooltip {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: .5rem 1rem;
 }
