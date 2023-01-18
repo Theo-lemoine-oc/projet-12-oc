@@ -27,6 +27,7 @@ main {
 }
 
 .dashboard .content .graphics {
+  padding-right: 2rem;
   width: 80%;
 }
 

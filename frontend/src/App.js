@@ -1,4 +1,3 @@
-import './App.css';
 import { RoutesPage } from './router/Routes.jsx';
 
 function App() {
