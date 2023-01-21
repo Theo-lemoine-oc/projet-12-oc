@@ -5,7 +5,6 @@ import './graphics.css';
 export default function Time(props) {
 
     const { time } = props;
-    console.log(time.sessions)
 
     return (
         <div className='time'>

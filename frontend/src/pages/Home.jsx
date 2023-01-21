@@ -6,8 +6,11 @@ import Activities from '../components/graphics/Activities';
 import { useUserInfos } from "../hooks/useUserInfos";
 import { useUserInfosActivities } from "../hooks/useUserInfosActivities";
 import { useUserInfosTime } from "../hooks/useUserInfosTime";
+import { useUserInfosPerformances } from "../hooks/useUserInfosPerformances";
 import { useParams } from 'react-router-dom';
 import Time from '../components/graphics/Time';
+import Performances from '../components/graphics/Performances';
+import Score from '../components/graphics/Score';
 
 
 function Home() {
@@ -15,12 +18,13 @@ function Home() {
   const { data: userInfos, isLoading: isLoadingUserInfos, hasError: hasErrorOnUserInfos } = useUserInfos(id);
   const { data: userInfosActivities, isLoading: isLoadingUserInfosActivities, hasError: hasErrorOnUserInfosActivities} = useUserInfosActivities(id);
   const { data: userInfosTime, isLoading: isLoadingUserInfosTime, hasError: hasErrorOnUserInfosTime} = useUserInfosTime(id);
+  const { data: UserInfosPerformances, isLoading: isLoadingUserInfosPerformances, hasError: hasErrorUserInfosPerformances} = useUserInfosPerformances(id);
 
-  if (isLoadingUserInfos || isLoadingUserInfosActivities || isLoadingUserInfosTime) {
+  if (isLoadingUserInfos || isLoadingUserInfosActivities || isLoadingUserInfosTime || isLoadingUserInfosPerformances) {
     return <div>Loading in progress..</div>
   }
 
-  if (hasErrorOnUserInfos || hasErrorOnUserInfosActivities || hasErrorOnUserInfosTime) {
+  if (hasErrorOnUserInfos || hasErrorOnUserInfosActivities || hasErrorOnUserInfosTime || hasErrorUserInfosPerformances) {
     return <div>An error has been occured</div>
   }
 
@@ -42,6 +46,14 @@ function Home() {
             <div className='graphics-bottom'>
               {(!isLoadingUserInfosTime && !hasErrorOnUserInfosTime && userInfosTime) && (
                 <Time time={ userInfosTime } />
+              )}
+
+              {/*(!isLoadingUserInfosPerformances && !hasErrorUserInfosPerformances && UserInfosPerformances) && (
+                <Performances perfs={ UserInfosPerformances } />
+              )*/}
+              
+              {(!isLoadingUserInfos && !hasErrorOnUserInfos && userInfos) && (
+                <Score score={userInfos} />
               )}
             </div>
           </section>
