@@ -95,3 +95,39 @@ h2 {
     outline: none;
     padding: .5rem 1rem;
 }
+
+
+
+/*** Score ***/
+.score {
+    position: relative;
+    background-color: #FBFBFB;
+    width: 32%;
+    height: 40%;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.score-label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+.score-label span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    font-size: 26px;
+    color: #282D30;
+}
+
+.score-label span span {
+    display: block;
+    width: 50%;
+    font-weight: 500;
+    font-size: 16px;
+    color: #74798C;
+}

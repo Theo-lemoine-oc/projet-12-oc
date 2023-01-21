@@ -25,6 +25,7 @@ main {
 .dashboard .content {
   display: flex;
   height: 100%;
+  margin-top: 2rem;
 }
 
 .dashboard .content .graphics {
