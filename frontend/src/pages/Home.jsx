@@ -48,9 +48,9 @@ function Home() {
                 <Time time={ userInfosTime } />
               )}
 
-              {/*(!isLoadingUserInfosPerformances && !hasErrorUserInfosPerformances && UserInfosPerformances) && (
+              {(!isLoadingUserInfosPerformances && !hasErrorUserInfosPerformances && UserInfosPerformances) && (
                 <Performances perfs={ UserInfosPerformances } />
-              )*/}
+              )}
               
               {(!isLoadingUserInfos && !hasErrorOnUserInfos && userInfos) && (
                 <Score score={userInfos} />

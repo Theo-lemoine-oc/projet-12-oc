@@ -5,7 +5,6 @@ import './graphics.css';
 export default function Score(props) {
 
     const { score } = props;
-    console.log(score)
 
     const pieData = [
         { name: "completed", value: score.todayScore, fillColor: `#E60000` },
