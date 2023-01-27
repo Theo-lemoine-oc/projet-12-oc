@@ -19,19 +19,35 @@ export default function Performances(props) {
 
     const data = perfs.data.map(item => {
       return {
-        subject: kindTranslate[item.kind],
-        A: item.value
+        activity: kindTranslate[item.kind],
+        value: item.value
       }
     });
 
     return (
+      <div className="perfs">
         <ResponsiveContainer width="100%" height="100%">
-          <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="subject" />
+          <RadarChart outerRadius="80%" data={data}>
+            <PolarGrid radialLines={false} />
+            <PolarAngleAxis
+              dataKey="activity"
+              stroke="white"
+              dy={4}
+              tickLine={false}
+              tick={{
+                fontSize: 12,
+                fontWeight: 500,
+              }}
+            />
             <PolarRadiusAxis />
-            <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+            <Radar 
+            dataKey="value"
+            fill="#FF0101B2"
+            fillOpacity={0.7}
+            stroke="transparent"
+             />
           </RadarChart>
         </ResponsiveContainer>
-      );
+      </div>
+    );
 }
