@@ -5,10 +5,11 @@ import './graphics.css';
 export default function Score(props) {
 
     const { score } = props;
+    const todayScore = score.todayScore || score.score;
 
     const pieData = [
-        { name: "completed", value: score.todayScore, fillColor: `#E60000` },
-        { name: "not-completed", value: 1 - score.todayScore, fillColor: "#fff" },
+        { name: "completed", value: todayScore, fillColor: `#E60000` },
+        { name: "not-completed", value: 1 - todayScore, fillColor: "#fff" },
     ];
 
     return (
@@ -32,7 +33,7 @@ export default function Score(props) {
 
             <div className='score-label'>
                 <span>
-                    {`${100 * score.todayScore }%`}
+                    {`${100 * todayScore }%`}
                     <span>de votre objectif</span>
                 </span>
             </div>
