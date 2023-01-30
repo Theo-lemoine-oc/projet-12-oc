@@ -15,7 +15,6 @@ const kindTranslate = {
 export default function Performances(props) {
 
     const { perfs } = props;
-    console.log(perfs);
 
     const data = perfs.data.map(item => {
       return {

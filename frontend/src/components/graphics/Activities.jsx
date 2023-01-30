@@ -19,7 +19,7 @@ export default function Activities(props) {
           <BarChart
             width={500}
             height={200}
-            data={activity.sessions}
+            data={activity.sessions.map((s, i) => ({...s, day: i + 1}))}
             margin={{
               top: 5,
               right: 50,

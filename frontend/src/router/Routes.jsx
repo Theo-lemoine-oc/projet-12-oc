@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "../pages/Home.jsx";
-import Error from "../pages/Error.jsx";
-import Navbar from "../components/navbar/Navbar.jsx";
-
+import Home from "../pages/Home";
+import Error from "../pages/Error";
+import Navbar from "../components/navbar/Navbar";
 
 export const RoutesPage = () => {
     return (

@@ -5,7 +5,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Activities from '../components/graphics/Activities';
 import { useUserInfos } from "../hooks/useUserInfos";
 import { useUserInfosActivities } from "../hooks/useUserInfosActivities";
-import { useUserInfosTime } from "../hooks/useUserInfosTime";
+import { useUserInfosTime } from "../hooks/useUserInfosTime"; 
 import { useUserInfosPerformances } from "../hooks/useUserInfosPerformances";
 import { useParams } from 'react-router-dom';
 import Time from '../components/graphics/Time';
@@ -15,6 +15,7 @@ import Score from '../components/graphics/Score';
 
 function Home() {
   const { id } = useParams();
+  
   const { data: userInfos, isLoading: isLoadingUserInfos, hasError: hasErrorOnUserInfos } = useUserInfos(id);
   const { data: userInfosActivities, isLoading: isLoadingUserInfosActivities, hasError: hasErrorOnUserInfosActivities} = useUserInfosActivities(id);
   const { data: userInfosTime, isLoading: isLoadingUserInfosTime, hasError: hasErrorOnUserInfosTime} = useUserInfosTime(id);

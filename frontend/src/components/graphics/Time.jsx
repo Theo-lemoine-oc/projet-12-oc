@@ -2,9 +2,12 @@ import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import './graphics.css';
 
+const daysOfWeek = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+
 export default function Time(props) {
 
     const { time } = props;
+    console.log(time)
 
     return (
         <div className='time'>
@@ -33,6 +36,7 @@ export default function Time(props) {
                             fontSize: 12,
                             fontWeight: 500,
                         }}
+                        tickFormatter={(day) => daysOfWeek[(day + 6) % 7]}
                     />
                     <Tooltip content={ CustomTooltip } />
                     <Line
