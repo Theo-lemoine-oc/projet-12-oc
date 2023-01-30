@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+// base url
 const api = axios.create({
   baseURL: `http://localhost:3000/`
 });
 
+// useUserInfos : Retrieves the user's basic data as well as the day's score and sports statistics
 export const useUserInfos = (id) => {
 
   const [data, setData] = useState(null);

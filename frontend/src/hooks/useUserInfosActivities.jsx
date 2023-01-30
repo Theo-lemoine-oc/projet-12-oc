@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+// base url
 const api = axios.create({
   baseURL: `http://localhost:3000/`
 });
 
+
+// useUserInfosActivities : Retrieves user session data
 export const useUserInfosActivities = (id) => {
 
   const [data, setData] = useState(null);

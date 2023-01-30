@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+//base url
 const api = axios.create({
   baseURL: `http://localhost:3000/`
 });
 
+
+// useUserInfosTime : Retrieves average time data from user's sport sessions
 export const useUserInfosTime = (id) => {
 
   const [data, setData] = useState(null);
