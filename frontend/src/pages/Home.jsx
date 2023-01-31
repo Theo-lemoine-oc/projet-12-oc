@@ -26,7 +26,7 @@ function Home() {
   }
 
   if (hasErrorOnUserInfos || hasErrorOnUserInfosActivities || hasErrorOnUserInfosTime || hasErrorUserInfosPerformances) {
-    return <div>An error has been occured</div>
+    return window.location.replace('/error');
   }
 
   return (
