@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types';
 import './graphics.css';
 
 const daysOfWeek = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
@@ -7,7 +8,6 @@ const daysOfWeek = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
 export default function Time(props) {
 
     const { time } = props;
-    console.log(time)
 
     return (
         <div className='time'>
@@ -67,4 +67,10 @@ const CustomTooltip = ({ active, payload }) => {
     }
   
     return null;
+  };
+
+  Time.propTypes = {
+    time: PropTypes.shape({
+        sessions: PropTypes.array
+    }).isRequired
   };

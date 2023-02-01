@@ -1,5 +1,6 @@
 import React from 'react';
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types';
 import './graphics.css';
 
 export default function Score(props) {
@@ -40,3 +41,9 @@ export default function Score(props) {
         </div>
       );
 }
+
+Score.propTypes = {
+    score: PropTypes.shape({
+        keyData: PropTypes.object
+    }).isRequired
+  };

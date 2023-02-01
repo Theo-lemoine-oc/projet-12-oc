@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MainTitle from '../components/utils/MainTitle';
 import FiguresCard from '../components/utils/FiguresCard';
 import Sidebar from "../components/sidebar/Sidebar";
@@ -11,7 +12,6 @@ import { useParams } from 'react-router-dom';
 import Time from '../components/graphics/Time';
 import Performances from '../components/graphics/Performances';
 import Score from '../components/graphics/Score';
-
 
 function Home() {
   const { id } = useParams();
@@ -34,7 +34,7 @@ function Home() {
       <Sidebar />
       <div className='dashboard'>
         {(!isLoadingUserInfos && !hasErrorOnUserInfos && userInfos) && (
-          <MainTitle user={userInfos} />
+          <MainTitle user={{ firstName: userInfos.userInfos.firstName }} />
         )}
 
         {/* Statistiques de l'utilisateur */}

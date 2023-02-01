@@ -1,5 +1,6 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types';
 import './graphics.css';
 
 
@@ -50,3 +51,9 @@ export default function Performances(props) {
       </div>
     );
 }
+
+Performances.propTypes = {
+  perfs: PropTypes.shape({
+      kind: PropTypes.object
+  }).isRequired
+};

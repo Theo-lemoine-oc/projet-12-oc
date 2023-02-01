@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import utils from './utils.css'
 
 import caloriesIcon from '../../assets/img/calories-icon.svg';
@@ -9,6 +10,7 @@ import fatIcon from '../../assets/img/fat-icon.svg';
 
 export const FiguresCard = (props) => {
     const { user } = props;
+    console.log(user)
 
     return (
         <div>
@@ -54,5 +56,11 @@ export const FiguresCard = (props) => {
         </div>
     )
 }
+
+FiguresCard.propTypes = {
+    user: PropTypes.shape({
+        keyData: PropTypes.object
+    }).isRequired
+  };
 
 export default FiguresCard;
